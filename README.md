@@ -1,52 +1,52 @@
-# Criando Aplicação Fullstack do Zero com Java Spring e React
+# Creating a Fullstack Application from Scratch with Java Spring and React
 
-Bem-vindo ao tutorial "Criando Aplicação Fullstack do Zero com Java Spring e React". Esta é a **Parte 1** da série, onde abordaremos o desenvolvimento do backend utilizando **Java Spring Boot** e **PostgreSQL**.
+Welcome to the tutorial "Creating a Fullstack Application from Scratch with Java Spring and React". This is **Part 1** of the series, where we will cover backend development using **Java Spring Boot** and **PostgreSQL**.
 
-## Visão Geral
+## Overview
 
-Neste tutorial, vamos construir o backend de uma aplicação fullstack com Java Spring Boot. A aplicação será uma API RESTful que servirá dados para o frontend, que será desenvolvido na Parte 2 usando React.
+In this tutorial, we will build the backend of a fullstack application using Java Spring Boot. The application will be a RESTful API that provides data for the frontend, which will be developed in Part 2 using React.
 
-## Objetivos
+## Objectives
 
-- Configurar um projeto Spring Boot com PostgreSQL.
-- Criar uma API RESTful com endpoints básicos.
-- Integrar o Spring Data JPA para persistência de dados.
-- Testar a aplicação usando ferramentas como Postman.
+- Set up a Spring Boot project with PostgreSQL.
+- Create a RESTful API with basic endpoints.
+- Integrate Spring Data JPA for data persistence.
+- Test the application using tools like Postman.
 
-## Pré-requisitos
+## Prerequisites
 
-Antes de começar, você deve ter:
+Before you start, you should have:
 
 - [Java JDK 17+](https://www.oracle.com/java/technologies/javase-downloads.html)
-- [Maven](https://maven.apache.org/download.cgi) (ou [Gradle](https://gradle.org/install/), se preferir)
-- [PostgreSQL](https://www.postgresql.org/download/) (instalado e em execução)
-- [Postman](https://www.postman.com/downloads/) (para testar a API)
+- [Maven](https://maven.apache.org/download.cgi) (or [Gradle](https://gradle.org/install/), if preferred)
+- [PostgreSQL](https://www.postgresql.org/download/) (installed and running)
+- [Postman](https://www.postman.com/downloads/) (to test the API)
 
-## Configuração do Projeto
+## Project Setup
 
-1. **Criar um novo projeto Spring Boot**
+1. **Create a New Spring Boot Project**
 
-   Utilize o [Spring Initializr](https://start.spring.io/) para criar um novo projeto Spring Boot com as seguintes opções:
+   Use the [Spring Initializr](https://start.spring.io/) to create a new Spring Boot project with the following options:
 
-   - Project: Maven Project (ou Gradle Project)
+   - Project: Maven Project (or Gradle Project)
    - Language: Java
-   - Spring Boot: [Versão estável mais recente]
+   - Spring Boot: [Latest stable version]
    - Dependencies: Spring Web, Spring Data JPA, PostgreSQL Driver
 
-   Clique em "Generate" para baixar o projeto.
+   Click "Generate" to download the project.
 
-2. **Importar o Projeto**
+2. **Import the Project**
 
-   Descompacte o arquivo baixado e importe-o para sua IDE favorita (por exemplo, IntelliJ IDEA ou Eclipse).
+   Unzip the downloaded file and import it into your preferred IDE (e.g., IntelliJ IDEA or Eclipse).
 
-3. **Configurar o Banco de Dados**
+3. **Configure the Database**
 
-   Abra o arquivo `src/main/resources/application.properties` e configure a conexão com o PostgreSQL:
+   Open the `src/main/resources/application.properties` file and configure the connection to PostgreSQL:
 
    ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/seu_banco
-   spring.datasource.username=seu_usuario
-   spring.datasource.password=sua_senha
+   spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
+   spring.datasource.username=your_username
+   spring.datasource.password=your_password
    spring.jpa.hibernate.ddl-auto=update
    spring.jpa.show-sql=true
    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
